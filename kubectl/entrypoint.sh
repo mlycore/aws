@@ -10,23 +10,23 @@ aws configure set aws_secret_access_key ${AWS_SECRET_ACCESS_KEY}
 echo "$KUBE_CONFIG_DATA" | base64 --decode > /tmp/config
 export KUBECONFIG=/tmp/config
 
-echo github_workspace: ${GITHUB_WORKSPACE}
-ls -lth ${GITHUB_WORKSPACE}
-
-echo runner_workspace: ${RUNNER_WORKSPACE}
-ls -lth ${RUNNER_WORKSPACE}
-
-echo pwd: ${PWD}
-
-echo "searching"
-find / -name "hotrod*"
-
-echo "ls -lth"
-ls -lth /home/runner/work/hotrod
-
-echo "change directory"
-cd /home/runner/work/hotrod
-
-ls -lth /home/runner/work
+#echo github_workspace: ${GITHUB_WORKSPACE}
+#ls -lth ${GITHUB_WORKSPACE}
+#
+#echo runner_workspace: ${RUNNER_WORKSPACE}
+#ls -lth ${RUNNER_WORKSPACE}
+#
+#echo pwd: ${PWD}
+#
+#echo "searching"
+#find / -name "hotrod*"
+#
+#echo "ls -lth"
+#ls -lth /home/runner/work/hotrod
+#
+#echo "change directory"
+#cd /home/runner/work/hotrod
+#
+#ls -lth /home/runner/work
 
 sh -c "kubectl $*"
