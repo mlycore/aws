@@ -16,4 +16,7 @@ ls -lth ${GITHUB_WORKSPACE}
 echo ${RUNNER_WORKSPACE}
 ls -lth ${RUNNER_WORKSPACE}
 
+echo "searching"
+find / -name "hotrod*"
+
 sh -c "kubectl $*"
