@@ -9,5 +9,7 @@ aws configure set aws_secret_access_key ${AWS_SECRET_ACCESS_KEY}
 # Extract the base64 encoded config data and write this to the KUBECONFIG
 echo "$KUBE_CONFIG_DATA" | base64 --decode > /tmp/config
 export KUBECONFIG=/tmp/config
+cd ${GITHUB_WORKSPACE}
+ls -lth
 
 sh -c "kubectl --kubeconfig=$KUBECONFIG $*"
