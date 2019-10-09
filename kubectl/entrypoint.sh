@@ -18,8 +18,9 @@ export KUBECONFIG=/tmp/config
 #
 #echo pwd: ${PWD}
 #
-#echo "searching"
+echo "searching"
 #find / -name "hotrod*"
+find / -name "kubernetes-deploy.yml"
 #
 #echo "ls -lth"
 #ls -lth /home/runner/work/hotrod
