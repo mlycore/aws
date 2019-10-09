@@ -27,4 +27,6 @@ ls -lth /home/runner/work/hotrod
 echo "change directory"
 cd /home/runner/work/hotrod
 
+ls -lth /home/runner/work
+
 sh -c "kubectl $*"
