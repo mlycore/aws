@@ -10,6 +10,4 @@ aws configure set aws_secret_access_key ${AWS_SECRET_ACCESS_KEY}
 echo "$KUBE_CONFIG_DATA" | base64 --decode > /tmp/config
 export KUBECONFIG=/tmp/config
 
-sh -c "aws configure list"
-
-#sh -c "kubectl --kubeconfig=$KUBECONFIG $*"
+sh -c "kubectl --kubeconfig=$KUBECONFIG $*"
